@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McGee & Craft PC | Law Attorneys | Waycross, GA</title>
+    <meta name="description" content="McGee & Craft PC - Experienced law attorneys in Waycross, GA with over 40 years of experience. Free consultations for divorce, family, criminal law, and estate planning.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Navigation */
+        nav {
+            background: #2c5282;
+            padding: 1rem 0;
+            border-bottom: 3px solid #ffd700;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .nav-content a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-content a:hover {
+            background: #ffd700;
+            color: #1a365d;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(44, 82, 130, 0.8)), 
+                        linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #e0e0e0 75%), 
+                        linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+            background-size: cover, 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+            background-position: center, 0 0, 0 0, 10px 10px, 10px 10px;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button {
+            background: #ffd700;
+            color: #1a365d;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a365d;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: #1a365d;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .learn-more {
+            color: #2c5282;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .learn-more:hover {
+            border-bottom-color: #ffd700;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a365d;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2c5282;
+            padding-top: 1rem;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chatbot-toggle {
+            background: linear-gradient(135deg, #1a365d, #2c5282);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #2c5282, #3182ce);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chatbot-window.open {
+            display: flex;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, #1a365d, #2c5282);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+
+        .message.bot {
+            background: #e3f2fd;
+            color: #1a365d;
+            align-self: flex-start;
+        }
+
+        .message.user {
+            background: #ffd700;
+            color: #1a365d;
+            align-self: flex-end;
+            margin-left: auto;
+        }
+
+        .chatbot-input {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid #ddd;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            margin-right: 0.5rem;
+            font-size: 14px;
+        }
+
+        .chatbot-input button {
+            background: #1a365d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .chatbot-window {
+                width: 90vw;
+                height: 70vh;
+                right: 5vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">McGee & Craft PC</div>
+                <div class="contact-info">
+                    <div>📞 (912) 283-3100</div>
+                    <div>📍 Waycross, GA</div>
+                    <div>⏰ Free Consultations</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home">Home</a>
+                <a href="#services">Our Services</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#divorce">Divorce Law</a>
+                <a href="#family">Family Law</a>
+                <a href="#criminal">Criminal Law</a>
+                <a href="#estate">Estate Planning</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Legal Excellence for Over 40 Years</h1>
+            <p class="hero-subtitle">When you need dedicated legal services with 40+ years of proven excellence, then you need McGee and Craft PC in Waycross, GA. After your one-on-one conference with our dedicated and knowledgeable legal team, you'll know you're in good hands.</p>
+            
+            <div class="hero-features">
+                <div class="hero-feature">Over 40 Years of Experience</div>
+                <div class="hero-feature">Free Consultations</div>
+                <div class="hero-feature">Member of ABA</div>
+            </div>
+            
+            <a href="#contact" class="cta-button">Get Your Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Legal Services</h2>
+            <div class="services-grid">
+                <div class="service-card" id="divorce">
+                    <h3>Divorce Law</h3>
+                    <p>Let the experienced attorneys at McGee and Craft PC help you with all your divorce and separation needs. We will come up with the best solution and make sure you receive a fair outcome.</p>
+                    <a href="#divorce" class="learn-more">Learn More</a>
+                </div>
+                
+                <div class="service-card" id="family">
+                    <h3>Family Law</h3>
+                    <p>Whether you are in need of legal help for child support or child custody, we can help you with it. Call our locally and family-owned business today for a FREE one-on-one consultation.</p>
+                    <a href="#family" class="learn-more">Learn More</a>
+                </div>
+                
+                <div class="service-card" id="criminal">
+                    <h3>Criminal Law</h3>
+                    <p>Are you charged with a crime? Our attorneys know how to protect your rights and fight for you. Get in touch with us for legal help on all misdemeanors and felonies. We also do jail visits.</p>
+                    <a href="#criminal" class="learn-more">Learn More</a>
+                </div>
+                
+                <div class="service-card" id="estate">
+                    <h3>Estate Planning</h3>
+                    <p>Get legal help for all your estate planning needs at McGee and Craft PC. From creating wills and trusts to living wills and caring for adults with disabilities, we've got them all covered.</p>
+                    <a href="#estate" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>Experienced Law Attorneys</h2>
+                    <p>At McGee & Craft PC, we bring over four decades of legal excellence to serve the Waycross, Georgia community. Our dedicated team of attorneys combines extensive experience with personalized attention to ensure every client receives the best possible representation.</p>
+                    <p>As a locally and family-owned business, we understand the unique needs of our community and are committed to providing accessible, high-quality legal services across multiple practice areas.</p>
+                    <a href="#contact" class="cta-button">Schedule Your Free Consultation</a>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free Consultations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">ABA</div>
+                        <div class="stat-label">Member</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Jail Visits</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>📞 (912) 283-3100</p>
+                    <p>📍 Waycross, Georgia</p>
+                    <p>✉️ info@mcgeeandcraft.com</p>
+                    <p>⏰ Free Consultations Available</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Practice Areas</h3>
+                    <a href="#divorce">Divorce Law</a>
+                    <a href="#family">Family Law</a>
+                    <a href="#criminal">Criminal Law</a>
+                    <a href="#estate">Estate Planning & Probate</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About Our Firm</h3>
+                    <p>Over 40 years of dedicated legal service to the Waycross, GA community. We are a locally and family-owned law firm committed to providing excellent legal representation.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 McGee & Craft PC. All rights reserved. | Waycross, Georgia Law Firm</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                McGee & Craft PC Legal Assistant
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    Hello! I'm here to help answer questions about McGee & Craft PC's legal services. How can I assist you today?
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Ask about our services..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chatbot functionality
+        let chatbotOpen = false;
+        
+        // Knowledge base about McGee & Craft PC
+        const knowledgeBase = {
+            experience: "McGee & Craft PC has over 40 years of legal experience serving the Waycross, Georgia community.",
+            consultation: "We offer FREE one-on-one consultations for all potential clients.",
+            location: "We are located in Waycross, Georgia and serve the local community.",
+            phone: "You can reach us at (912) 283-3100.",
+            services: "We provide legal services in Divorce Law, Family Law, Criminal Law, and Estate Planning & Probate.",
+            divorce: "Our divorce law services help with all divorce and separation needs, ensuring fair outcomes for our clients.",
+            family: "We handle family law matters including child support, child custody, and other family-related legal issues.",
+            criminal: "Our criminal law attorneys protect your rights and fight for you in all misdemeanor and felony cases. We also provide jail visits.",
+            estate: "We offer comprehensive estate planning services including wills, trusts, living wills, and care for adults with disabilities.",
+            aba: "We are proud members of the American Bar Association (ABA).",
+            business: "McGee & Craft PC is a locally and family-owned business.",
+            jail: "Yes, we do jail visits for our criminal law clients."
+        };
+
+        function toggleChatbot() {
+            chatbotOpen = !chatbotOpen;
+            const window = document.getElementById('chatbotWindow');
+            window.classList.toggle('open', chatbotOpen);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatbotInput');
+            const message = input.value.trim();
+            
+            if (message === '') return;
+            
+            addMessage(message, 'user');
+            input.value = '';
+            
+            // Generate bot response
+            setTimeout(() => {
+                const response = generateResponse(message);
+                addMessage(response, 'bot');
+            }, 500);
+        }
+
+        function addMessage(text, sender) {
+            const messagesContainer = document.getElementById('chatbotMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', sender);
+            messageDiv.textContent = text;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function generateResponse(message) {
+            const lowerMessage = message.toLowerCase();
+            
+            // Check for keywords and return appropriate responses
+            if (lowerMessage.includes('phone') || lowerMessage.includes('number') || lowerMessage.includes('call')) {
+                return knowledgeBase.phone;
+            }
+            
+            if (lowerMessage.includes('consultation') || lowerMessage.includes('free')) {
+                return knowledgeBase.consultation;
+            }
+            
+            if (lowerMessage.includes('experience') || lowerMessage.includes('years')) {
+                return knowledgeBase.experience;
+            }
+            
+            if (lowerMessage.includes('location') || lowerMessage.includes('where') || lowerMessage.includes('address')) {
+                return knowledgeBase.location;
+            }
+            
+            if (lowerMessage.includes('divorce')) {
+                return knowledgeBase.divorce;
+            }
+            
+            if (lowerMessage.includes('family') || lowerMessage.includes('child')) {
+                return knowledgeBase.family;
+            }
+            
+            if (lowerMessage.includes('criminal') || lowerMessage.includes('crime') || lowerMessage.includes('jail')) {
+                return knowledgeBase.criminal;
+            }
+            
+            if (lowerMessage.includes('estate') || lowerMessage.includes('will') || lowerMessage.includes('trust')) {
+                return knowledgeBase.estate;
+            }
+            
+            if (lowerMessage.includes('services') || lowerMessage.includes('what do you do')) {
+                return knowledgeBase.services;
+            }
+            
+            if (lowerMessage.includes('aba') || lowerMessage.includes('bar association')) {
+                return knowledgeBase.aba;
+            }
+            
+            if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                return "Hello! I'm here to help you learn about McGee & Craft PC's legal services. What would you like to know?";
+            }
+            
+            if (lowerMessage.includes('hours') || lowerMessage.includes('open')) {
+                return "Please call us at (912) 283-3100 to schedule your free consultation. We'll work with your schedule!";
+            }
+            
+            // Default response with helpful suggestions
+            return "I'd be happy to help you with information about our legal services. You can ask me about our experience, services (divorce, family, criminal, estate planning), consultations, location, or contact information. For specific legal advice, please call (912) 283-3100 for a free consultation.";
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add some interactivity to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                console.log('Service card clicked:', this.querySelector('h3').textContent);
+            });
+        });
+    </script>
+</body>
+</html>
